@@ -1,182 +1,4 @@
-<Library name="IHP 131 BiCmos components">
-     <Component name="MIM Capacitor" schematic_id = "Cmim">
-        <Description>
-            SG13G2 MIM capacitor
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xcap_cmim{PartCounter} {nets} cap_cmim w={w} l={l} m=1'>
-                    <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ">
-                    </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Capacitor.sym</File>
-            </Symbol>
-        </Symbols>
-        <Parameters>
-            <Parameter name="w" unit="um" default_value="70" show="true">
-                <Description>Width</Description>
-            </Parameter>
-            <Parameter name="l" unit="um" default_value="70" show="true">
-                <Description>Length</Description>
-            </Parameter>
-        </Parameters>
-    </Component>
-
-    <Component name="RF MIM Capacitor" schematic_id = "RFCmim">
-       <Description>
-           SG13G2 RF MIM capacitor
-       </Description>
-       <Netlists>
-               <NgspiceNetlist value = 'Xcap_rfcmim{PartCounter} {nets} rfcmim w={w} l={l} m=1'>
-                   <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ">
-                   </Include>
-               </NgspiceNetlist>
-       </Netlists>
-       <Symbols>
-           <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-              <File>./Lumped_Component_Symbols/Capacitor.sym</File>
-           </Symbol>
-       </Symbols>
-       <Parameters>
-           <Parameter name="w" unit="um" default_value="70" show="true">
-               <Description>Width</Description>
-           </Parameter>
-           <Parameter name="l" unit="um" default_value="70" show="true">
-               <Description>Length</Description>
-           </Parameter>
-       </Parameters>
-    </Component>
-
-    <Component name="Rsil" schematic_id = "Rsil">
-        <Description>
-            SG13G2 Salicide resistor
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xrsil{PartCounter} {nets} rsil w={w} l={l} m={m}'>
-                        <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ">
-                        </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Resistor.sym</File>
-            </Symbol>
-        </Symbols>
-        <Parameters>
-            <Parameter name="w" unit="um" default_value="0.5" show="true">
-                <Description>Width</Description>
-            </Parameter>
-            <Parameter name="l" unit="um" default_value="0.5" show="true">
-                <Description>Length</Description>
-            </Parameter>
-            <Parameter name="m" unit="" default_value="1" show="true">
-                <Description>multiplier</Description>
-            </Parameter>
-            <Parameter name="b" unit="" default_value="0" show="true">
-                <Description>Number of bends</Description>
-            </Parameter>
-        </Parameters>
-    </Component>
-
-    <Component name="Rppd" schematic_id = "Rppd">
-        <Description>
-            SG13G2 polysilicon unsalicided resistor
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xrppd{PartCounter} {nets} rppd w={w} l={l} m={m} b={b}'>
-                    <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ">
-                    </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Resistor.sym</File>
-            </Symbol>
-        </Symbols>
-        <Parameters>
-            <Parameter name="w" unit="um" default_value="0.5" show="true">
-                <Description>Width</Description>
-            </Parameter>
-            <Parameter name="l" unit="um" default_value="0.5" show="true">
-                <Description>Length</Description>
-            </Parameter>
-            <Parameter name="m" unit="" default_value="1" show="true">
-                <Description>multiplier</Description>
-            </Parameter>
-            <Parameter name="b" unit="" default_value="0" show="true">
-                <Description>Number of bends</Description>
-            </Parameter>
-        </Parameters>
-    </Component>
-
-    <Component name="Ntap" schematic_id = "Ntap">
-        <Description>
-            N-type Tap device
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xntap{PartCounter} {nets} ntap1'>
-                        <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ">
-                        </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Resistor.sym</File>
-            </Symbol>
-        </Symbols>
-    </Component>
-
-    <Component name="P-Type Tap" schematic_id = "Ptap">
-        <Description>
-            N-type Tap device
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xptap{PartCounter} {nets} ptap1'>
-                        <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ">
-                        </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Resistor.sym</File>
-            </Symbol>
-        </Symbols>
-    </Component>
-
-    <Component name="Rhigh" schematic_id = "Rhigh">
-        <Description>
-            SG13G2 polysilicon high sheet resistance resistor
-        </Description>
-        <Netlists>
-                <NgspiceNetlist value = 'Xrhigh{PartCounter} {nets} rhigh w={w} l={l} m=1'>
-                    <Include value=".LIB {PDK_ROOT}/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ">
-                    </Include>
-                </NgspiceNetlist>
-        </Netlists>
-        <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Lumped_Component_Symbols/Resistor.sym</File>
-            </Symbol>
-        </Symbols>
-        <Parameters>
-            <Parameter name="w" unit="um" default_value="0.5" show="true">
-                <Description>Width</Description>
-            </Parameter>
-            <Parameter name="l" unit="um" default_value="0.5" show="true">
-                <Description>Length</Description>
-            </Parameter>
-            <Parameter name="m" unit="" default_value="1" show="true">
-                <Description>multiplier</Description>
-            </Parameter>
-            <Parameter name="b" unit="" default_value="0" show="true">
-                <Description>Number of bends</Description>
-            </Parameter>
-        </Parameters>
-    </Component>
-
-
+<Library name="IHP SG13G2 Nonlinear Components">
     <Component name="LV-nMOS" schematic_id = "LV-nMOS">
         <Description>
             SG13G2 Low Voltage nMOS transistor
@@ -191,7 +13,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/NMOS.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/NMOS.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -251,7 +73,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/NMOS.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/NMOS.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -311,7 +133,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/PMOS.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/PMOS.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -371,7 +193,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/PMOS.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/PMOS.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -429,7 +251,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/NPN.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/NPN.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -454,7 +276,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/NPN.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/NPN.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -479,7 +301,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/NPN.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/NPN.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -502,7 +324,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/Diode.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/Diode.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
@@ -528,7 +350,7 @@
         </Netlists>
         <Symbols>
             <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
-               <File>./Nonlinear_Components_Symbols/Diode.sym</File>
+               <File>{QUCS_S_COMPONENTS_LIBRARY}/Nonlinear_Components_Symbols/Diode.sym</File>
             </Symbol>
         </Symbols>
         <Parameters>
