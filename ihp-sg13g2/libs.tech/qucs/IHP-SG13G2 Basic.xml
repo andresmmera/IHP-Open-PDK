@@ -10,7 +10,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Capacitor.sym</File>
             </Symbol>
         </Symbols>
@@ -35,7 +35,7 @@
                </NgspiceNetlist>
        </Netlists>
        <Symbols>
-           <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+           <Symbol id="Standard" type="external">
               <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Capacitor.sym</File>
            </Symbol>
        </Symbols>
@@ -60,7 +60,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Resistor.sym</File>
             </Symbol>
         </Symbols>
@@ -91,7 +91,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Resistor.sym</File>
             </Symbol>
         </Symbols>
@@ -122,7 +122,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Resistor.sym</File>
             </Symbol>
         </Symbols>
@@ -139,7 +139,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Resistor.sym</File>
             </Symbol>
         </Symbols>
@@ -156,7 +156,7 @@
                 </NgspiceNetlist>
         </Netlists>
         <Symbols>
-            <Symbol id="Standard" type="external"> <!-- Generic symbol from the "Lumped Components" library -->
+            <Symbol id="Standard" type="external">
                <File>{QUCS_S_COMPONENTS_LIBRARY}/Lumped_Component_Symbols/Resistor.sym</File>
             </Symbol>
         </Symbols>
